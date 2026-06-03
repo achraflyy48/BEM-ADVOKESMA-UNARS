@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisi Advokesma | BEM UNARS</title>
+    <!-- Menggunakan Tailwind CSS via CDN untuk styling yang cepat dan modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi warna kustom (Biru Navy dan Kuning) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0f204b',
+                        yellow: '#facc15',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome untuk Ikon -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <header class="bg-navy text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo Divisi -->
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-navy rounded-full flex items-center justify-center text-navy font-bold text-xl shadow-md">
+                    <!-- Placeholder Logo: Bisa diganti dengan tag <img> jika sudah ada file logonya -->
+                    <img src="assets/LOGO ADVOKESMA.png" alt="Logo Advokesma" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h1 class="font-bold text-xl leading-tight">ADVOKESMA</h1>
+                    <p class="text-xs text-yellow">BEM UNARS Situbondo</p>
+                </div>
+            </div>
+            
+            <!-- Navigasi Desktop -->
+            <nav class="hidden md:flex gap-6 font-semibold">
+                <a href="#beranda" class="hover:text-yellow transition-colors duration-300">Beranda</a>
+                <a href="#tentang" class="hover:text-yellow transition-colors duration-300">Tentang Kami</a>
+                <a href="#pengaduan" class="bg-yellow text-navy px-4 py-2 rounded-md hover:bg-yellow-400 transition-colors duration-300">Buat Pengaduan</a>
+            </nav>
+
+            <!-- Navigasi Mobile (Hamburger) -->
+            <button class="md:hidden text-2xl text-yellow" id="mobile-menu-btn" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden bg-navy border-t border-blue-900 md:hidden">
+            <a href="#beranda" class="block px-4 py-3 hover:bg-blue-900 hover:text-yellow transition" onclick="closeMenu()">Beranda</a>
+            <a href="#tentang" class="block px-4 py-3 hover:bg-blue-900 hover:text-yellow transition" onclick="closeMenu()">Tentang Kami</a>
+            <a href="#pengaduan" class="block px-4 py-3 text-yellow font-bold hover:bg-blue-900 transition" onclick="closeMenu()">Buat Pengaduan</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="bg-navy text-white py-16 sm:py-20 relative overflow-hidden">
+        <!-- Dekorasi Background -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <svg class="absolute w-32 h-32 sm:w-64 sm:h-64 -top-10 -left-10 text-yellow" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>
+            <svg class="absolute w-48 h-48 sm:w-96 sm:h-96 -bottom-20 -right-20 text-yellow" fill="currentColor" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50"/></svg>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">#Dengar<span class="text-yellow">Kamu</span></h2>
+                <p class="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-lg">Kami dari Divisi Advokasi dan Kesejahteraan Mahasiswa (Advokesma) BEM UNARS siap mengawal hak, aspirasi, dan kesejahteraan seluruh mahasiswa.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#pengaduan" class="bg-yellow text-navy font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg hover:bg-yellow-400 transform hover:-translate-y-1 transition-all duration-300">
+                        Sampaikan Aspirasi <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ilustrasi Hero (tampilkan juga di mobile) -->
+            <div class="md:w-5/12 mt-6 md:mt-0 w-full block md:hidden">
+                <div class="bg-gradient-to-tr from-blue-800 to-navy p-2 rounded-2xl shadow-2xl border-4 border-yellow">
+                    <img src="assets/2.jpg" alt="Unars" class="rounded-xl w-full h-auto object-cover opacity-80 hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+
+            <div class="md:w-5/12 hidden md:block">
+                <div class="bg-gradient-to-tr from-blue-800 to-navy p-2 rounded-2xl shadow-2xl border-4 border-yellow">
+                    <img src="assets/2.jpg" alt="Unars" class="rounded-xl w-full h-auto object-cover opacity-80 hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-navy inline-block relative">
+                    Tentang Advokesma
+                    <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-yellow -mb-2 rounded"></span>
+                </h2>
+            </div>
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-6 rounded-xl border-t-4 border-navy shadow-sm">
+                            <i class="fa-solid fa-scale-balanced text-4xl text-yellow mb-4"></i>
+                            <h3 class="font-bold text-xl mb-2 text-navy">Advokasi</h3>
+                            <p class="text-gray-600 text-sm">Menjembatani permasalahan akademik, fasilitas, dan kebijakan kampus.</p>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl border-t-4 border-yellow shadow-sm mt-8">
+                            <i class="fa-solid fa-heart-pulse text-4xl text-navy mb-4"></i>
+                            <h3 class="font-bold text-xl mb-2 text-navy">Kesejahteraan</h3>
+                            <p class="text-gray-600 text-sm">Hadir untuk mendengar, mendampingi, dan memperjuangkan kesejahteraan mahasiswa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-navy mb-4">Jembatan Penghubung Mahasiswa & Rektorat</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-justify">
+                        Divisi Advokesma (Advokasi dan Kesejahteraan Mahasiswa) merupakan bagian vital dari Badan Ekesekutif Mahasiswa Universitas Abdurachman Saleh Situbondo sebagai wadah advokasi mahasiswa yang bertugas menampung aspirasi, memberikan pendampingan, serta memperjuangkan kesejahteraan mahasiswa demi terciptanya lingkungan kampus yang baik, inklusif, dan responsof terhadap kebutuhan mahasiswa.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed text-justify">
+                        Dengan prinsip keadilan dan transparansi, kami berkomitmen untuk menciptakan lingkungan kampus yang kondusif, di mana hak-hak setiap mahasiswa terpenuhi dan kesejahteraan mereka terjamin.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengaduan Section (Form WhatsApp) -->
+    <section id="pengaduan" class="py-16 sm:py-20 bg-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                <!-- Info Samping Form -->
+                <div class="bg-navy text-white p-6 sm:p-10 md:w-2/5 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 sm:-right-10 sm:-top-10 w-32 h-32 sm:w-40 sm:h-40 bg-blue-800 rounded-full opacity-50"></div>
+                    <div class="absolute -left-6 -bottom-6 sm:-left-10 sm:-bottom-10 w-24 h-24 sm:w-32 sm:h-32 bg-yellow rounded-full opacity-20"></div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-yellow">Punya Kendala?</h3>
+                        <p class="mb-6 sm:mb-8 text-gray-300 text-sm sm:text-base">Jangan ragu untuk melaporkan masalah akademik, fasilitas, atau kendala lainnya. Tim kami akan merespons dan membantu mengadvokasi masalah Anda.</p>
+                        
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex items-center gap-3 sm:gap-4">
+                                <i class="fa-solid fa-location-dot text-yellow text-lg sm:text-xl w-5 sm:w-6"></i>
+                                <span class="text-sm">Universitas Abdurachman Saleh Situbondo</span>
+                            </div>
+                            <div class="flex items-center gap-3 sm:gap-4">
+                                <i class="fa-brands fa-instagram text-yellow text-lg sm:text-xl w-5 sm:w-6"></i>
+                                <span class="text-sm">@bemsastra_unars</span>
+                            </div>
+                            <div class="flex items-center gap-3 sm:gap-4">
+                                <i class="fa-solid fa-envelope text-yellow text-lg sm:text-xl w-5 sm:w-6"></i>
+                                <span class="text-sm break-words">bemsastra61@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Pengaduan -->
+                <div class="p-6 sm:p-10 md:w-3/5">
+                    <h3 class="text-xl sm:text-2xl font-bold text-navy mb-4 sm:mb-6">Formulir Pengaduan Mahasiswa</h3>
+                    <!-- Form terhubung ke fungsi JavaScript kirimWhatsApp() -->
+                    <form id="formPengaduan" onsubmit="kirimWhatsApp(event)" class="space-y-4 sm:space-y-5">
+                        
+                        <div>
+                            <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                            <input type="text" id="nama" required placeholder="Masukkan nama lengkap Anda" 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-navy outline-none transition">
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+                            <div>
+                                <label for="nim" class="block text-sm font-medium text-gray-700 mb-1">NIM</label>
+                                <input type="text" id="nim" required placeholder="Contoh: 2021001" 
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-navy outline-none transition">
+                            </div>
+                            <div>
+                                <label for="fakultas" class="block text-sm font-medium text-gray-700 mb-1">Fakultas / Prodi</label>
+                                <input type="text" id="fakultas" required placeholder="Contoh: Ekonomi / Manajemen" 
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-navy outline-none transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1">Detail Pengaduan / Aspirasi</label>
+                            <textarea id="pesan" rows="4" required placeholder="Ceritakan secara detail kendala yang Anda alami..." 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy focus:border-navy outline-none transition resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                            class="w-full bg-navy text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-900 transition duration-300 flex justify-center items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-yellow text-xl"></i> Kirim Pengaduan via WhatsApp
+                        </button>
+                        <p class="text-xs text-gray-500 text-center mt-1">Data Anda akan dijaga kerahasiaannya oleh tim Advokesma.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-8 mt-auto border-t-4 border-yellow">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <i class="fa-solid fa-hands-holding-circle text-yellow text-2xl"></i>
+                <h2 class="text-xl font-bold">BEM UNARS</h2>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">Kementerian Advokasi dan Kesejahteraan Mahasiswa</p>
+            <p class="text-gray-500 text-xs">&copy; 2026 Divisi Advokesma BEM Universitas Abdurachman Saleh Situbondo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Fungsi untuk toggle menu mobile
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            const isHidden = menu.classList.contains('hidden');
+            menu.classList.toggle('hidden');
+            if (btn) btn.setAttribute('aria-expanded', String(isHidden));
+        }
+
+        // Fungsi untuk menutup menu mobile setelah klik link
+        function closeMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            menu.classList.add('hidden');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+
+        // Fungsi untuk memproses form dan mengirim ke WhatsApp
+        function kirimWhatsApp(event) {
+            // Mencegah form melakukan reload halaman
+            event.preventDefault();
+
+            // Mengambil nilai dari input form
+            const nama = document.getElementById('nama').value;
+            const nim = document.getElementById('nim').value;
+            const fakultas = document.getElementById('fakultas').value;
+            const pesan = document.getElementById('pesan').value;
+
+            // NOMOR WHATSAPP TUJUAN (Format: 628xxx tanpa tanda + atau 0 di depan)
+            // SILAKAN UBAH NOMOR DI BAWAH INI DENGAN NOMOR WA ADMIN ADVOKESMA
+            const nomorWhatsApp = "6283129313938"; 
+
+            // Menyusun format pesan
+            // %0A adalah kode untuk Enter (Baris Baru) di URL
+            const teksPesan = `Halo Tim Advokesma BEM UNARS,%0A%0ASaya ingin menyampaikan pengaduan/aspirasi.%0A%0A*Data Diri:*%0A- Nama : ${nama}%0A- NIM : ${nim}%0A- Fakultas/Prodi : ${fakultas}%0A%0A*Detail Pengaduan:*%0A${pesan}%0A%0ATerima kasih.`;
+
+            // Membuat URL WhatsApp Api
+            const urlWhatsApp = `https://wa.me/${nomorWhatsApp}?text=${teksPesan}`;
+
+            // Membuka tab baru yang mengarah ke WhatsApp
+            window.open(urlWhatsApp, '_blank');
+
+            // Opsional: Mereset form setelah tombol ditekan
+            document.getElementById('formPengaduan').reset();
+        }
+    </script>
+</body>
+</html>
