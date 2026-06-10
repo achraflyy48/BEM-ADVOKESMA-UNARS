@@ -29,7 +29,7 @@ Karena proyek ini adalah *static website* murni, kamu tidak perlu menginstal *de
 
 1. **Clone repositori ini:**
    ```bash
-   git clone [https://github.com/username-kamu/nama-repo-kamu.git](https://github.com/username-kamu/nama-repo-kamu.git)
+   git repo clone achraflyy48/BEM-ADVOKESMA-UNARS
 
 2. **Buka Folder Project**
    ```bash
