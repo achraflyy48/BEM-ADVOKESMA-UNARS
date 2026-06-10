@@ -8,6 +8,10 @@ Website resmi untuk **Divisi Advokasi dan Kesejahteraan Mahasiswa (Advokesma) BE
 
 Proyek ini dibangun untuk memperkuat *branding* divisi, memfasilitasi komunikasi dengan mahasiswa, dan menyediakan portal pengaduan yang terintegrasi langsung dengan WhatsApp guna memenuhi program kerja (proker) BEM.
 
+## 🔗 Live Demo
+Kamu bisa melihat dan mencoba langsung website ini melalui tautan berikut:  
+👉 **[Kunjungi Website Advokesma BEM UNARS](https://achraflyy48.github.io/BEM-ADVOKESMA-UNARS/)**
+
 ## ✨ Fitur Utama
 
 * **Responsive Design**: Antarmuka yang dioptimalkan untuk berbagai ukuran layar (Desktop, Tablet, dan *Mobile*) menggunakan Tailwind CSS.
